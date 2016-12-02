@@ -1,6 +1,15 @@
 /* Created by Akanksha
    Desc: CSS for index page
 */
+@font-face {
+    font-family: "AvenirNext";
+    src: url("AvenirNextLTPro-Regular.otf");
+}
+
+* {
+    font-family: "AvenirNext";
+}
+
 body {
 	background-color: #05d197;
 	height: 240px;
@@ -15,7 +24,7 @@ body {
 .title {
     color: #ffffff;
     font-size: 100px;
-    font-style: bold;
+    font-weight: bold;
 }
 
 /*custom scrollbar for the app*/

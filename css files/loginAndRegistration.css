@@ -4,6 +4,14 @@
 */
 
 /* ===GLOBAL=== */
+@font-face {
+	font-family: "AvenirNext";
+	src: url("AvenirNextLTPro-Regular.otf");
+}
+
+* {
+	font-family: "AvenirNext";
+}
 
 body {
     background-color: #05d197;
@@ -30,6 +38,7 @@ a:hover {
     border: 3px #ffffff;
     color: #ffffff;
     font-size: 20px;
+    font-weight: bold;
     height: 60px;
     margin-top: 30px;
     text-align: center;

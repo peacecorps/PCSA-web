@@ -8,6 +8,15 @@
    Safety tools basics
    Safety plan worksheet
 */
+@font-face {
+	font-family: "AvenirNext";
+	src: url("AvenirNextLTPro-Regular.otf");
+}
+
+* {
+	font-family: "AvenirNext";
+}
+
 body {
 	background-color: #05d197;
 	margin: 0;	
@@ -38,6 +47,7 @@ body {
 	color: #ffffff;
 	cursor: pointer;
 	font-size: 20px;
+	font-weight: bold;
 	height: 150px;
 	margin-top: 30px;
 	text-align: center;

@@ -1,6 +1,15 @@
 /* Created by Akanksha
    Desc: CSS for the vertical accordian menu
 */
+@font-face {
+	font-family: "AvenirNext";
+	src: url("AvenirNextLTPro-Regular.otf");
+}
+
+* {
+	font-family: "AvenirNext";
+}
+
 #accordian {
 	background: #ffd590;
 	color: white;
@@ -18,7 +27,7 @@
 	color: #ffffff;
 	cursor: pointer;
 	font-size: 25px;
-	font-style: bold;	
+	font-weight: bold;	
 	line-height: 34px;	
 }
 
@@ -38,7 +47,7 @@
 	color: #ffffff;
 	cursor: pointer;
 	font-size: 15px;
-	font-style: bold;
+	font-weight: bold;
 	line-height: 34px;
 	padding: 0 10px;
 }
