@@ -1,0 +1,37 @@
+# language used in the project
+language: php
+os: linux
+dist: precise
+
+# list any PHP version to test against
+php:
+  - 7.0
+  - 7.1
+
+# restricting the use of root privileges
+sudo: false
+
+# cache directories
+cache:
+  directories:
+    - cache
+    - vendor
+    - $HOME/.composer/cache
+
+# installing dependencies
+install:
+  - npm install
+  - npm install -g gulp-cli karma-cli
+  - gulp
+  - composer install --no-interaction --prefer-source
+
+# checks to run before scripts
+before_script:
+  # php syntax check (lint)
+  - if find . -name "*.php" ! -path "./vendor/*" -exec php -l {} \; | grep "unexpected $end"; then exit 1; fi
+  - ./vendor/bin/phpcs --standard=PSR2 includes/ modules/ request/ index.php
+
+# scripts like phpunit test
+script:
+  - ./vendor/bin/phpunit tests/phpUnitTests/
+  - ./node_modules/karma/bin/karma start jasmine.config.js --single-run
